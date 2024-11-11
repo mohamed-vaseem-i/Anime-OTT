@@ -85,12 +85,15 @@ p{
     left: 50%;
     color: blueviolet;
 }
+#sp1 , #sp2{
+    display: none;
+}
 }
 
 @media screen and (max-width:720px) {
     body {
         background-color: black;
-        background-image: url("../assets/small_size_pics/YN_LogP.png");
+        background-image: url("../assets/small_size_pics/login-signup-home/YN_LogP.png");
         background-size: 105%;
         background-repeat: no-repeat;
     }
@@ -115,7 +118,7 @@ p{
         height: 1.9rem;
         top: 33%;
         left: 8%;
-        font-size: 20px;
+        font-size: 15px;
         opacity: 0.75;
     }
 
@@ -127,7 +130,7 @@ p{
         left: 8%;
         width: 80%;
         height: 1.9rem;
-        font-size: 20px;
+        font-size: 15px;
         opacity: 0.75;
     }
 
@@ -175,5 +178,8 @@ p{
         position: absolute;
         top: 85%;
         left: 20%;
+    }
+    #sp1 , #sp2{
+        display: none;
     }
 }

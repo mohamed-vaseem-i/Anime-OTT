@@ -68,7 +68,7 @@
    @media screen and (max-width:720px){
     body{
         background-color: black;
-        background-image: url("../assets/small_size_pics/DN_New.jpg");
+        background-image: url("../assets/small_size_pics/login-signup-home/DN_New.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
         color: white;

@@ -8,7 +8,7 @@ body{
 }
 @keyframes slider{
     0%{background-image: url("../assets/pc_size_pics/AOT.jpg");}
-    30%{background-image: url("../assets/pc_size_pics/Sukuna.png");}
+    30%{background-image: url("../assets/pc_size_pics/DitF.jpg");}
     60%{background-image: url("../assets/pc_size_pics/DS.jpg");}
     100%{background-image: url("../assets/pc_size_pics/AOT_2.jpg");}
 }

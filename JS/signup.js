@@ -43,7 +43,11 @@ submit.addEventListener("click", function (event) {
             const errorCode = error.code;
             const errorMessage = error.message;
             alert(errorMessage)
-
+            
             // ..
         });
+        if(email!=="" && password!==""){
+            localStorage.setItem("Username",email);
+            localStorage.setItem("Password",password);
+        }
 });

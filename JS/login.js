@@ -23,7 +23,7 @@ const app = initializeApp(firebaseConfig);
 //submit button
 const submit = document.getElementById('submit');
 submit.addEventListener("click", function (event) {
-    event.preventDefault() //please understand what this line of code means..
+    event.preventDefault() 
     const auth = getAuth();
     //inputs
     const email = document.getElementById("email").value;
@@ -40,13 +40,30 @@ submit.addEventListener("click", function (event) {
       const errorCode = error.code;
       const errorMessage = error.message;
     });
-    if(email == "" || password == ""){
-      alert("Hai");
+
+    const getLocStoreEmail = localStorage.getItem("Username").value;
+    const getLocStorePass = localStorage.getItem("Password").value;
+
+    
+    if(email!=getLocStorePass){
+      span1.textContent = "Please Enter Email";
+      span1.style.color = "red";
+      span1.style.display = "block";
     }
-    else{
+    if(password!==getLocStorePass){
+      span2.textContent = "Please Enter Password";
+      span2.style.color = "red";
+      span2.style.display = "block";
+    }
+    else if(email == getLocStoreEmail && password == getLocStorePass){
       alert("You Have loginned successful");
-      localStorage.setItem("Username",email);
-      localStorage.setItem("Password",password);
+      span1.style.display = "none";
+      span2.style.display = "none";
+      if(getLocStoreEmail==""||getLocStorePass==""){
+        localStorage.setItem("Username",email);
+        localStorage.setItem("Password",password);
+      }
+      
     }
 });
 
@@ -56,3 +73,6 @@ const signup = document.getElementById("signup");
 signup.addEventListener("click",()=>{
   window.location.href = "signup.html";
 })
+
+const span1 = document.getElementById("sp1");
+const span2 = document.getElementById("sp2");
